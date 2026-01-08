@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class EnemyProperties : MonoBehaviour
 {
-    public float enemySpeed = 20.0f;
+    public float enemySpeed = 3.0f;
+    private float enemyXBound = 20.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,6 +14,17 @@ public class EnemyProperties : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.right * Time.deltaTime * enemySpeed);
+
+        if (transform.position.x > enemyXBound)
+        {
+            Destroy(gameObject);
+        }
+
+        else if(transform.position.x < -enemyXBound)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -20,7 +32,7 @@ public class EnemyProperties : MonoBehaviour
         if (collision.gameObject.CompareTag("Collectible"))
         {
             Destroy(collision.gameObject);
-            Destroy(gameObject);
+            enemySpeed *= 2;
         }
 
         if (collision.gameObject.CompareTag("Player"))

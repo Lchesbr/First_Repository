@@ -538,10 +538,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   originalGrav: {x: 0, y: 0, z: 0}
   horizontalInput: 0
-  moveSpeed: 10
+  moveSpeed: 11.98
   xBound: 14
   jumpPower: 10
-  boostPower: 3.36
+  boostPower: 5.98
   gravityMod: 0.75
   isGrounded: 1
   canBoost: 0
@@ -642,9 +642,10 @@ MonoBehaviour:
   - {fileID: 2956826177265868407, guid: 980ddab69c8a6f74ca24b2f5ebb17299, type: 3}
   - {fileID: 6370891212440273120, guid: 4e52b2e015ceed24a910e14325b4bf6c, type: 3}
   - {fileID: 3214991492486188535, guid: 4a7aef16b3fdcd944a0d7877cacb09cd, type: 3}
-  enemyMaxRangeY: 0
-  enemyMinRangeY: 0
-  enemySpawnPosX: 0
+  enemy: {fileID: 7939578930064578413, guid: a635b101409c6d94c8f0a83c023d4524, type: 3}
+  enemyMaxRangeY: 5.6
+  enemyMinRangeY: -1.9
+  enemySpawnPosX: 15
 --- !u!1 &1483130573
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,11 +1022,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2475716769623250269, guid: a635b101409c6d94c8f0a83c023d4524, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.09
+      value: -13.71
       objectReference: {fileID: 0}
     - target: {fileID: 2475716769623250269, guid: a635b101409c6d94c8f0a83c023d4524, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.07
+      value: 4.03
       objectReference: {fileID: 0}
     - target: {fileID: 2475716769623250269, guid: a635b101409c6d94c8f0a83c023d4524, type: 3}
       propertyPath: m_LocalPosition.z
